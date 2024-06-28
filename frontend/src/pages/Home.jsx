@@ -2,11 +2,16 @@ import { useState, useEffect } from "react";
 import api from "../api";
 import Note from "../componenets/Note"
 import "../styles/Home.css"
+import Navbar from "../componenets/Navbar";
+
+import { SearchBar } from '../componenets/SearchBar';
+import { SearchResultsList } from '../componenets/SearchResultList';
 
 function Home() {
   const [notes, setNotes] = useState([]);
   const [content, setContent] = useState("");
   const [title, setTitle] = useState("");
+  const [results,setResults]= useState([]);
 
   useEffect(() =>
     //callls getNItes function
@@ -54,13 +59,24 @@ function Home() {
 
   return (
     <div>
+    <Navbar />
+
+    <div className="searchdiv">
+      <div className="search-bar-container">
+        <SearchBar setResults={setResults} />
+        <SearchResultsList results={results}  />
+
+      </div>
+      </div>
+
+
       <div>
         <h2>Notes</h2>
         {notes.map((note) => (
           <Note note={note} onDelete={deleteNote} key={note.id}></Note>
         ))}
       </div>
-      <h2>Create a note</h2>
+      <h2>Create note</h2>
       <form onSubmit={createNote}>
         <label htmlFor="title"> Title: </label>
         <br />
@@ -73,7 +89,7 @@ function Home() {
           value={title}
         />
 
-        <label htmlFor="content"> Content: </label>
+        <label htmlFor="content"> Content : </label>
         <br />
         <textarea
           id="content"

@@ -8,6 +8,9 @@ import NotFOund from "./pages/NotFOund"
 import ProtectedRoute from "./componenets/ProtectedRoute"
 
 
+import About from "./pages/About";
+
+
 function Logout(){
   localStorage.clear()
   return <Navigate to="/login"/>
@@ -18,7 +21,7 @@ function RegisterAndLogout(){
 }
 
 function App() {
-
+  
 
   return (
     <>
@@ -32,9 +35,11 @@ function App() {
           </ProtectedRoute>
             }
         />
+        <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/logout" element={<Logout/>} />
         <Route path="/register" element={ <RegisterAndLogout/>   } />
+        
         <Route path="*"  element={<NotFOund/>}/>
 
 
