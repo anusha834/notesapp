@@ -11,6 +11,7 @@ import ProtectedRoute from "./componenets/ProtectedRoute"
 import About from "./pages/About";
 
 
+
 function Logout(){
   localStorage.clear()
   return <Navigate to="/login"/>
@@ -32,6 +33,8 @@ function App() {
           element={
           <ProtectedRoute>
             <Home/>
+
+            
           </ProtectedRoute>
             }
         />

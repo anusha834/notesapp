@@ -2,16 +2,31 @@ import React from 'react';
 import "../styles/SearchResultsList.css";
 import { SearchResult } from './SearchResult';
 
-export const SearchResultsList = ({results}) => {
+export const SearchResultsList = ({ results }) => {
   return (
     <div className='results-list'>
-        {
-            results.map((result,id)=>
-            {
-                return <SearchResult result={result} key={id}/>;
-            })
-        }
-    
+      {results.map((result, id) => (
+        <SearchResult result={result} key={id} />
+      ))}
     </div>
   );
 };
+
+// import React from 'react';
+// import "../styles/SearchResultsList.css";
+// import { SearchResult } from './SearchResult';
+
+// export const SearchResultsList = ({results}) => {
+//   return (
+//     <div className='results-list'>
+//         {
+//             results.map((result,id)=>
+//             {
+//                 return <SearchResult result={result} key={id}/>;
+//             })
+//         }
+    
+//     </div>
+//   );
+// };
+

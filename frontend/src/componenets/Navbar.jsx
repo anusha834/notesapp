@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
  import "../styles/Navbar.css";
-
+ import { SearchBar } from '../componenets/SearchBar';
+import { SearchResultsList } from '../componenets/SearchResultList';
+import { useState,useEffect} from "react";
+import api from "../api";
 function Navbar() {
+
   return (
     <nav className="navbar">
       <h1 className="navbar-logo"> <Link to="/">MyApp</Link></h1>
@@ -12,7 +16,8 @@ function Navbar() {
         
         <li>
           <Link to="/logout">Logout</Link>
-        </li>c
+        </li>
+       
       </ul>
       
 

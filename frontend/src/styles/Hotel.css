@@ -1,0 +1,25 @@
+.hotel-container{
+        
+        padding: 10px;
+        margin: 20px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        
+      
+  }
+  
+  .hotel-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .hotel-address, .hotel-rating, .hotel-review, .hotel-coordinates, .hotel-pincode {
+    margin: 8px 0;
+  }
+  
+  a {
+    color:#f78432f9;
+    text-decoration: none;
+  }
+  
