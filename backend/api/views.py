@@ -109,7 +109,11 @@ class HotelList(generics.ListAPIView):
     def get_queryset(self):
         queryset = Hotels.objects.all()
         pincode = self.request.query_params.get('pincode', None)
+        rating = self.request.query_params.get('rating', None)
         if pincode:
             queryset = queryset.filter(pincode=pincode)
-        return queryset
+        if rating:
+            queryset = queryset.filter(rating=rating)
 
+        return queryset
+        

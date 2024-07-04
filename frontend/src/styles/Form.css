@@ -1,13 +1,22 @@
+#formcolor{
+  background: linear-gradient(#ffcf91, #e4a5ca);
+}
+
 .form-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 50px auto;
+    
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
+    max-width: 100%;
+   
+    
+  
+   
   }
   
   .form-input {
@@ -22,9 +31,9 @@
   .form-button {
     width: 95%;
     padding: 10px;
-    margin: 20px 0;
+    margin: 10px 0;
     background-color: #007bff;
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -32,7 +41,7 @@
   }
   
   .form-button:hover {
-    background-color: #0056b3;
+    background-color: #b35f00;
   }
 
 
@@ -41,18 +50,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(240, 250, 255);
 }
 
 .switch-button {
-    margin-top: 10px;
+
     padding: 10px 20px;
-    background-color: #008cff;
+    background-color: #ffb14b;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 95%;
 }
 
 .switch-button:hover {
-    background-color: #0057b3da;
+    background-color: #ff9500da;
+}
+
+
+.switch-link{
+  color: #3e3b3888;
+}
+.switch-link:hover{
+  color: rgb(245, 160, 247);
+  cursor: pointer;
+
 }

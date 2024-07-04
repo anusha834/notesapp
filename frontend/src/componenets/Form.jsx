@@ -42,7 +42,7 @@ function Form({ route, method }) {
     };
 
     return (
-        <div className="form-container" >  
+        <div className="form-container" id="formcolor" >  
         <form onSubmit={handleSubmit} className="form-container">
             <h1>{name}</h1>
             <input
@@ -73,21 +73,23 @@ function Form({ route, method }) {
             <button className="form-button" type="submit">
                 {name}
             </button>
-           
-        </form>
-        {method === "login" && (
-            <button className="switch-button" onClick={() => navigate("/register")}>
-                Register
-            </button>
+            {method === "login" && (
+            <a className="switch-link" onClick={() => navigate("/register")}>
+                New user? Sign up
+            </a>
             
-        )}
-        {method === "register" && (
-            <button className="switch-button" onClick={() => navigate("/login")}>
+             )}
+            {method === "register" && (
+            <button className="switch-button"  onClick={() => navigate("/login")}>
                 Login
             </button>
         )}
+           
+        </form>
+       
        
         </div>
+        
 
     );
 }

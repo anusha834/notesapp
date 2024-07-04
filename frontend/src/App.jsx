@@ -6,9 +6,12 @@ import Register from "./pages/Register"
 import Home from "./pages/Home"
 import NotFOund from "./pages/NotFOund"
 import ProtectedRoute from "./componenets/ProtectedRoute"
+import Search from "./pages/Search"
 
 
 import About from "./pages/About";
+
+
 
 
 
@@ -39,6 +42,7 @@ function App() {
             }
         />
         <Route path="/about" element={<About />} />
+        <Route path="/search" element={<Search />} />
         <Route path="/login" element={<Login/>} />
         <Route path="/logout" element={<Logout/>} />
         <Route path="/register" element={ <RegisterAndLogout/>   } />
